@@ -101,3 +101,13 @@ for col in cat_features:
         with open("slice_output.txt", "a") as f:
             print(f"{col}: {slicevalue}, Count: {count:,}", file=f)
             print(f"Precision: {p:.4f} | Recall: {r:.4f} | F1: {fb:.4f}", file=f)
+
+print("Training dataset shape:", train.shape)
+print("\nTraining dataset columns:")
+print(train.columns.tolist())
+
+print("\nTraining dataset information:")
+print(train.info())
+
+print("\nTraining dataset salary distribution:")
+print(train["salary"].value_counts())
